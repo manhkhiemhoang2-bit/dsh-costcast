@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="72" viewBox="0 0 760 72" role="img" aria-label="dsh-costcast 读数条示意图">
+  <title>dsh-costcast 读数条</title>
+  <desc>输入框上方的常驻读数：上下文规模、下一步成本区间、本轮成本区间、当前价格档、每步成本走势。</desc>
+
+  <style>
+    .lbl { font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif; font-size: 12px; fill: #8b9198; }
+    .val { font-family: ui-monospace, "SFMono-Regular", Consolas, monospace; font-size: 12px; fill: #5b6169; }
+    .hi  { font-family: ui-monospace, "SFMono-Regular", Consolas, monospace; font-size: 12px; fill: #1f2328; }
+    .sep { font-family: sans-serif; font-size: 12px; fill: #d9dde2; }
+    .cap { font-family: -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif; font-size: 11px; fill: #a8aeb6; }
+  </style>
+
+  <!-- 蓝鲸标记（微软 Fluent Emoji，MIT） -->
+  <g transform="translate(12 15) scale(0.469)">
+    <path fill="#00a6ed" d="M24.04 6.508C27.007 9.5 29 12.953 29 16.468c0 6.422-1.95 10.392-6.648 12.315a16 16 0 0 1-1.652-.318l-.012.582c-.105.563-.485 1.352-1.625.703c-.84-.478-2.112-1.55-2.33-4.281c-.511-1.271-.617-2.91-.733-4.969c-.164-2.91-3.078-3.89-5-4c-1.84-.105-8.316-.467-8.869-.498a15 15 0 0 1-.01-1.111c0-2.66 3.363-4.9 5.713-4.9h6.55c3.46 0 6.27 2.81 6.27 6.27c-.17 2.411 3.373 3.405 3.82.78c.492-2.896-.591-6.166-2.435-8.494c-.195-.047-.308-.047-.445.047c-1.258 1.258-2.16 1.312-3.852.914a1 1 0 0 0-.239-.103c-.228-.077-.435-.147-.331-.608c.14-.625 1.125-1.719 1.125-1.719c.773-.906 1.758-1.11 2.226-1.055c.402.047.515-.068.58-.135l.03-.029c.065-.051.133-.437.133-.437c-.164-.875.043-1.678.547-2.383c0 0 .882-1.266 1.687-1.344c.72-.07.803.37.879.768q.012.071.027.139c.334 1.535.17 1.902-.215 2.765c-.065.147-.137.308-.214.492c-.13.308-.058.434.038.605zM8.219 29.938c-1.735 0-3.64-2.438-3.11-5.922c.313.2 2.615 2.052 3.75 3.14c.329.844.11 2.782-.64 2.782" />
+    <path fill="#1c1c1c" d="M15.517 15a.61.61 0 0 1-.604-.604v-.758c0-.33.274-.604.604-.604s.604.274.604.604v.758a.604.604 0 0 1-.604.604" />
+    <path fill="#aeddff" d="M20.706 28.208q.745.278 1.692.556q-.84.348-1.8.608q.06-.166.09-.325zm-3.973-4.468c-.107-.771-.157-1.671-.217-2.74l-.016-.281c-.164-2.911-3.766-4.61-5.687-4.719c-1.839-.105-8.138-.01-8.682 0c.339 7.399 6.034 14.639 13.885 14.095a27 27 0 0 0 3.007-.367c-1-.583-2.564-2.007-2.29-5.988" />
+  </g>
+
+  <text class="lbl" x="42" y="34">上下文</text>
+  <text class="val" x="88" y="34">562K</text>
+
+  <text class="sep" x="132" y="34">│</text>
+
+  <text class="lbl" x="148" y="34">下一步</text>
+  <text class="hi"  x="194" y="34">¥0.032–0.036</text>
+
+  <text class="sep" x="298" y="34">│</text>
+
+  <text class="lbl" x="314" y="34">本轮</text>
+  <text class="val" x="348" y="34">¥0.19–0.54</text>
+
+  <text class="sep" x="436" y="34">│</text>
+
+  <text class="lbl" x="452" y="34">空闲价</text>
+
+  <g transform="translate(636 20)" fill="#5b6169">
+    <rect x="0"  y="14" width="8" height="6"  opacity="0.24"/>
+    <rect x="11" y="11" width="8" height="9"  opacity="0.33"/>
+    <rect x="22" y="12" width="8" height="8"  opacity="0.29"/>
+    <rect x="33" y="8"  width="8" height="12" opacity="0.42"/>
+    <rect x="44" y="9"  width="8" height="11" opacity="0.38"/>
+    <rect x="55" y="5"  width="8" height="15" opacity="0.53"/>
+    <rect x="66" y="6"  width="8" height="14" opacity="0.49"/>
+    <rect x="77" y="2"  width="8" height="18" opacity="0.68"/>
+    <rect x="88" y="0"  width="8" height="20" opacity="0.80"/>
+    <rect x="99" y="0"  width="8" height="20" opacity="0.80"/>
+  </g>
+
+  <text class="cap" x="42" y="60">输入框上方常驻；点击向上展开成本构成与每步走势</text>
+</svg>
