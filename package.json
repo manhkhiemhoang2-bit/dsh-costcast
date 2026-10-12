@@ -1,0 +1,43 @@
+{
+  "name": "dsh-costcast",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "会话成本预估：在输入框上方显示下一步与本轮的大致花费",
+  "license": "MIT",
+  "icon": "icon.svg",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manhkhiemhoang2-bit/dsh-costcast.git"
+  },
+  "homepage": "https://github.com/manhkhiemhoang2-bit/dsh-costcast#readme",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "cost",
+    "token",
+    "usage"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  },
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "node --test test/estimate.test.mjs test/client.test.mjs"
+  }
+}
