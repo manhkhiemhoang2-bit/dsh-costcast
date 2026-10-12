@@ -1,0 +1,38 @@
+name: 测试
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        node: ['20', '22']
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: 语法检查构建产物
+        run: node --check client.js
+
+      - name: 跑测试
+        run: node --test test/estimate.test.mjs test/client.test.mjs
+
+      - name: 确认构建产物与源码一致
+        shell: bash
+        run: |
+          node build.mjs
+          if ! git diff --quiet client.js; then
+            echo "client.js 与 src/ 不一致，请重新运行 node build.mjs 并提交"
+            git diff --stat client.js
+            exit 1
+          fi
