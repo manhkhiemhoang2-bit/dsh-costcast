@@ -1,0 +1,7 @@
+# 统一行尾，避免 Windows 检出后产生整文件差异
+* text=auto eol=lf
+
+*.svg text
+*.png binary
+*.jpg binary
+*.woff2 binary

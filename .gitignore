@@ -1,0 +1,13 @@
+node_modules/
+*.log
+*.tgz
+.DS_Store
+Thumbs.db
+
+# 编辑器
+.vscode/
+.idea/
+
+# 本地草稿
+*.local.md
+scratch/
